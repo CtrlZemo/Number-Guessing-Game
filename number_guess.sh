@@ -9,7 +9,7 @@ DISPLAY() {
   echo "Enter your username:"
   read USERNAME
 
-  # Get user ID from database
+  # Get user ID from database part
   USER_ID=$($PSQL "SELECT u_id FROM users WHERE name = '$USERNAME'")
 
   if [[ -n $USER_ID ]]; then
