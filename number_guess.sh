@@ -9,7 +9,7 @@ DISPLAY() {
   echo "Enter your username:"
   read USERNAME
 
-  # Get user ID from database part
+  # Get user ID from database
   USER_ID=$($PSQL "SELECT u_id FROM users WHERE name = '$USERNAME'")
 
   if [[ -n $USER_ID ]]; then
@@ -67,4 +67,3 @@ GAME() {
 }
 
 DISPLAY
- 
